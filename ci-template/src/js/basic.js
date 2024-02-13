@@ -1,7 +1,4 @@
-export default function sum(items) {
-  let result = 0;
-  for (const item of items) {
-    result += item;
-  }
-  return result;
+export function cleanPhoneNumber(phoneNumber) {
+  const digits = phoneNumber.split(/[^\d]+/g).join('');
+  return `+${digits.length === 11 ? '7'.concat(digits.slice(1)) : digits}`;
 }
